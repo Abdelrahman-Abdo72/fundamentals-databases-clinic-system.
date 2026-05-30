@@ -1,16 +1,38 @@
-# React + Vite
+# Clinic Management System Database Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project is a Clinic Management System database project developed using MySQL 8.0.  
+It manages the main clinic workflow, including departments, clinics, doctors, patients, appointments, diagnoses, appointment costs, and appointment status.
 
-Currently, two official plugins are available:
+The project also includes SQL views, triggers, sample queries, reports, and a simple web application built with React/Vite for the frontend and Node.js/Express for the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Main Features
+- Manage medical departments and clinics
+- Store doctor and patient information
+- Schedule appointments between patients and doctors
+- Track appointment status, cost, timing, and diagnosis
+- Generate reports using SQL views
+- Prevent invalid appointment data using triggers
+- Display database results through a web application
 
-## React Compiler
+## Database Tables
+The database includes the following main tables:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Department
+- Clinic
+- Doctor
+- Patient
+- Appointment
+- Appointment_Audit
 
-## Expanding the ESLint configuration
+The Appointment table is the central table because it connects patients with doctors and stores scheduling, clinical, and financial information.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## SQL Files
+The SQL implementation is organized inside the `sql` folder:
+
+```text
+sql/
+├─ create_tables.sql
+├─ load_data.sql
+├─ queries.sql
+└─ triggers.sql
