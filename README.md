@@ -31,21 +31,20 @@ The Appointment table is the central table because it connects patients with doc
 The SQL implementation is organized inside the `sql` folder:
 
 
-How to set up and run the website:
-1) run all the database sql files
-2) go to nile-clinic
-3) go to backend
-4) open server.js --> change password to your local instance password
-5) open terminal in backend folder
-6) type node server.js
-7) go to frontend
-8) open terminal in frontend folder
-9) type npm run dev
-10) in your browser go to http://localhost:5173/
-
 ```text
 sql/
 ├─ create_tables.sql
 ├─ load_data.sql
 ├─ queries.sql
 └─ triggers.sql
+
+How to set up and run the website:
+1) run all the database sql files
+2) go to backend
+3) open server.js --> change password to your local instance password
+4) open terminal in backend folder
+5) type node server.js
+6) go to frontend
+7) open terminal in frontend folder
+8) type npm run dev
+9) in your browser go to http://localhost:5173/
